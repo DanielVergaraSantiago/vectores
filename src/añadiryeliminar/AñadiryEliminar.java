@@ -15,14 +15,14 @@ public class AñadiryEliminar {
             System.out.print("Ingrese el "+(i+1)+" elemento del vector: ");
             vector[i] = leer.nextInt();
         }
-        
-        System.out.println("Elja la opcion deseada: ");
         System.out.println(" ");
-        System.out.println("*******************************************");
-        System.out.println("*    1. Eliminar un elemento del vector.  *");
-        System.out.println("*    2. Agregar un elemento al vector.    *");
-        System.out.println("*    3. Salir.                            *");
-        System.out.println("*******************************************");
+        System.out.println("Elja la opcion deseada: ");
+        System.out.println(" *******************************************");
+        System.out.println(" *    1. Eliminar un elemento del vector.  *");
+        System.out.println(" *    2. Agregar un elemento al vector.    *");
+        System.out.println(" *    3. Multiplicar por un escalar.       *");
+        System.out.println(" *    4. Salir.                            *");
+        System.out.println(" *******************************************");
         seleccion = leer.nextInt();
         
         
@@ -71,6 +71,19 @@ public class AñadiryEliminar {
                 break;
                 
             case(3):
+                System.out.print("Ingrese el numero por el cual desea multiplicar: ");
+                int mp = leer.nextInt();
+                for(int i=0 ;i<tam ;i++){
+                    vector[i] *= mp;
+                }
+                System.out.println("Matriz resultante:");
+                for(int i=0 ;i<tam ;i++){
+                    System.out.print(vector[i]+" ");
+                }
+                
+                break;
+            case(4):
+                System.out.println("Adios.");
                 break;
         }
         
